@@ -1,15 +1,14 @@
-body{
-  margin: 0;
-  background-color: silver;
+.flex-container {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-a {
-  color: aliceblue;
-}
-
-a:hover {
-  text-decoration: none;
+body{
+  background-color: #BCBDC4;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
 }
 
 .uppercase {
@@ -18,22 +17,22 @@ a:hover {
 
 .btn {
   text-decoration: none;
-  background: red;
+  background: rgb(91, 91, 167);
   color: white;
   padding: 10px;
   display: inline-block;
 }
 
 .carlosHeadshot {
-    max-width: 25rem;
-    max-height: 25rem;
-  }
+  max-width: 20rem;
+  max-height: 20rem;
+}
 
-  .content-wrap {
-    display: flex;
-    width: 80%;
-    
-  }
-/* HEader and footer styless----------------
+/* Header and footer styless----------------
 ---------------- */
 
+/* Intro----------------
+---------------- */
+.intro {
+  
+}
