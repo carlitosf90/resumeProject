@@ -1,14 +1,41 @@
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
 }
 
-body{
-  background-color: #BCBDC4;
+body {
+  background-color: #E8E6EA;
   padding: 5px;
   text-align: center;
   display: inline-block;
+}
+
+.top-nav {
+  background-color: #BCBDC4;
+  overflow: hidden;
+}
+
+.top-nav a {
+  float: left;
+  display: block;
+  color: #0B4BAD;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 16px;
+}
+
+.top-nav a:hover {
+  background-color: #0B4BAD;
+  color: #BCBDC4;
+}
+
+.top-nav a:active {
+  color: #F4F4F8;
+}
+
+.top-nav .icon {
+  display: none;
 }
 
 .uppercase {
@@ -26,13 +53,85 @@ body{
 .carlosHeadshot {
   max-width: 20rem;
   max-height: 20rem;
+  padding-top: 10px;
 }
 
 /* Header and footer styless----------------
 ---------------- */
 
+
+
 /* Intro----------------
 ---------------- */
-.intro {
-  
+#home {}
+
+
+
+/* Work----------------
+---------------- */
+.work {
+  text-align: left;
+}
+
+
+/* Media queries----------------
+---------------- */
+@media screen and (max-width: 479px) {
+
+  /* start of phone styles */
+  .top-nav {
+    width: 100%;
+  }
+
+  .top-nav a:not(:first-child) {
+    display: none;
+  }
+
+  .top-nav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .top-nav.responsive {
+    position: relative;
+  }
+
+  .top-nav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .top-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .carlosHeadshot {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  /* start of medium tablet styles */
+
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  /* start of large tablet styles */
+
+
+
+}
+
+@media screen and (min-width: 992px) {
+  /* start of desktop screens */
+
 }
