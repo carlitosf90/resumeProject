@@ -1,16 +1,17 @@
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
+/* GOLBAL */
 body {
   background-color: #E8E6EA;
   padding: 5px;
   text-align: center;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
+/* NAVIGATION----------------
+---------------- */
 .top-nav {
+  width: 100%;
   background-color: #BCBDC4;
   overflow: hidden;
 }
@@ -25,6 +26,10 @@ body {
   font-size: 16px;
 }
 
+.top-nav a:not(:first-child) {
+  display: none;
+}
+
 .top-nav a:hover {
   background-color: #0B4BAD;
   color: #BCBDC4;
@@ -34,38 +39,43 @@ body {
   color: #F4F4F8;
 }
 
-.top-nav .icon {
-  display: none;
+.top-nav a.icon {
+  float: right;
+  display: block;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.top-nav.responsive {
+  position: relative;
 }
+
+.top-nav.responsive a.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.top-nav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+/* Intro----------------
+---------------- */
+#home {}
 
 .btn {
   text-decoration: none;
-  background: rgb(91, 91, 167);
+  background: #0B4BAD;
   color: white;
   padding: 10px;
   display: inline-block;
 }
 
 .carlosHeadshot {
-  max-width: 20rem;
-  max-height: 20rem;
+  width: 80%;
   padding-top: 10px;
 }
-
-/* Header and footer styless----------------
----------------- */
-
-
-
-/* Intro----------------
----------------- */
-#home {}
-
-
 
 /* Work----------------
 ---------------- */
@@ -73,54 +83,80 @@ body {
   text-align: left;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Education----------------
+---------------- */
+.education {
+  text-align: left;
+}
+
+/* Contact Info----------------
+---------------- */
+.contact-info {
+  justify-content: space-between;
+}
+
+.email {
+  order: 1;
+}
+
+.website {
+  order: 2;
+}
+
+.twitter {
+  order: 4;
+}
+
+.linkedin {
+  order: 3;
+}
+
+.facebook {
+  order: 5;
+}
 
 /* Media queries----------------
 ---------------- */
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 425px) {
+  /* 425px- ____ - portrait styles */
 
-  /* start of phone styles */
-  .top-nav {
-    width: 100%;
-  }
-
-  .top-nav a:not(:first-child) {
+  #home {
     display: none;
   }
 
-  .top-nav a.icon {
-    float: right;
-    display: block;
+  .icon {
+    display: none;
   }
 
-  .top-nav.responsive {
-    position: relative;
-  }
+  .intro-wrap {
+    display: flex;
+    flex-direction: row;
 
-  .top-nav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .top-nav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
   }
 
   .carlosHeadshot {
-    width: 80%;
+    order: 0;
+    /* padding-top: 10px; */
+    padding: 20px;
+    max-width: 200px;
+    max-height: 200px;
   }
-}
 
-@media screen and (min-width: 480px) {
-  /* start of medium tablet styles */
+  #intro {}
+
+  /* @media screen and (min-width: 480px) {
+    /* start of medium tablet styles 
 
   .top-nav {
     display: flex;
     justify-content: space-between;
-  }
+  } */
 
+  */
 }
 
 @media screen and (min-width: 768px) {
